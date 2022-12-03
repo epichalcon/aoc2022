@@ -14,30 +14,19 @@ def first_star(data: list):
 
     return maximo
 
-def insert_in_order(num, maximos):
-    aux = maximos.copy()
-    for i, maximo in enumerate(aux):
-        if maximo < num:
-            maximos.insert(i, num)
-            break
-
-    maximos.append(num)
-
-    while len(maximos) > 3:
-        maximos.pop()
-
-
 def second_star(data: list):
     maximos = []
 
     counter = 0
     for line in data:
         if line == '':
-            insert_in_order(counter, maximos)
+            maximos.append(counter)
+            maximos.sort(reverse=True)
+            if len(maximos)>3:
+                maximos.pop()
             counter = 0
         else:
             counter += int(line)
-    insert_in_order(counter, maximos)
     return sum(maximos)
 
 print(second_star(getdata.separarPorLineas(content)))
