@@ -79,8 +79,6 @@ class GestorSistemaFich:
         self.directorios[dir] = directorio
 
 
-content = getdata.getdata('day7')
-content = getdata.separarPorLineas(content)
 
 
 def parse(instruccion: str):
@@ -112,6 +110,8 @@ def construir_arbol(data: List[str], gestor):
         else:
             guardar_informacion(instrucion, gestor)
 
+content = getdata.getdata('day7')
+content = getdata.separarPorLineas(content)
 
 gestor = GestorSistemaFich()
 

@@ -6,3 +6,5 @@ def getdata(day: str) -> str:
 
 def separarPorLineas(data: str) -> list:
     return data.split('\n')
+def getMatrizDeNumeros(data):
+    return [[*map(int,list(line))] for line in data]
