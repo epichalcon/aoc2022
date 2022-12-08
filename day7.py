@@ -1,4 +1,4 @@
-from typing import List, Set, Dict
+from typing import List
 from getdata import getdata
 
 
@@ -79,7 +79,6 @@ class GestorSistemaFich:
         self.directorios[dir] = directorio
 
 
-
 content = getdata.getdata('day7')
 content = getdata.separarPorLineas(content)
 
@@ -113,13 +112,16 @@ def construir_arbol(data: List[str], gestor):
         else:
             guardar_informacion(instrucion, gestor)
 
+
 gestor = GestorSistemaFich()
 
 construir_arbol(content, gestor)
 
+
 def first_star(gestor: GestorSistemaFich):
     gestor.root.get_size()
     return sum([tam for tam in gestor.tamanhos if tam < 100000])
+
 
 def second_star(gestor: GestorSistemaFich):
     tam_minimo = 30000000
