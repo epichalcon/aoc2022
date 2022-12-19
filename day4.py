@@ -13,7 +13,8 @@ def first_star(data):
     fully_contained_pairs = 0
     for pair in data:
         first_elf, second_elf = parse_pair(pair)
-        if (first_elf[0] <= second_elf[0] and first_elf[1] >= second_elf[1]) or (second_elf[0] <= first_elf[0] and second_elf[1] >= first_elf[1]):
+        if (first_elf[0] <= second_elf[0] and first_elf[1] >= second_elf[1]) or\
+                (second_elf[0] <= first_elf[0] and second_elf[1] >= first_elf[1]):
             fully_contained_pairs += 1
 
     return fully_contained_pairs
