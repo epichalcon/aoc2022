@@ -10,7 +10,7 @@ directions = {
     'D': [0,-1]
 }
 
-content = getdata.getdata('day0')
+content = getdata.getdata('day9')
 content = getdata.separarPorLineas(content)
 
 

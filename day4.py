@@ -3,9 +3,10 @@ from getdata import getdata
 content = getdata.getdata('day4')
 content = getdata.separarPorLineas(content)
 
+
 def parse_pair(pair: str):
     splitted_pair = pair.split(',')
-    first_elf =  [int(num) for num in splitted_pair[0].split('-')]
+    first_elf = [int(num) for num in splitted_pair[0].split('-')]
     second_elf = [int(num) for num in splitted_pair[1].split('-')]
     return first_elf, second_elf
 
